@@ -19,9 +19,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["cypress", "jest"]
+    "types": ["jest"]
   },
   // only compile the production TS files
   "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.test.ts", "src/**/*.cy.ts"]
+  "exclude": ["src/**/*.test.ts"]
 }
