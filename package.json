@@ -25,7 +25,8 @@
     "build-storybook": "build-storybook -s public",
     "storybook": "start-storybook -p 6006 -s public",
     "test-storybook": "test-storybook",
-    "chromatic": "npx chromatic --project-token=<replace_token_here>"
+    "chromatic": "npx chromatic --project-token=<replace_token_here>",
+    "storybook:coverage": "yarn test-storybook --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -69,6 +70,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
     "@storybook/addon-a11y": "^6.5.16",
     "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-coverage": "^0.0.8",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
