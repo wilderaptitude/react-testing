@@ -9,12 +9,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: use node
+        uses: actions/setup-node@v3
         with:
           node-version: '18.x'
       - run: yarn install
-      - name: execute unit tests
-        run: yarn run test
-      - name: load storybook
-        run: yarn storybook & npx wait-on http://localhost:6006/
-      - run: yarn test-storybook
+      - run: yarn run test

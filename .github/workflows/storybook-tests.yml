@@ -1,0 +1,18 @@
+name: test-storybook
+
+on: [ push ]
+
+jobs:
+  execute_tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: yarn install
+      - name: serve storybook
+        run: yarn storybook & npx wait-on http://localhost:6006/
+      - run: yarn test-storybook
