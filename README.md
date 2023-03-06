@@ -29,7 +29,11 @@ Opens storybook in browser
 Executes storybook test-runner https://storybook.js.org/docs/react/writing-tests/test-runner
 Note: In order to execute tests, storybook must be running
 
+![test-runner](https://github.com/wilderaptitude/react-testing/blob/storybook/assets/accesibility_testrunner.png?raw=true)
+
 ### `yarn chromatic`
 
 Execute visual tests on chromatic
 Note: Before using this command, you have to replace a valid token in packaje.json
+
+![chromatic](https://github.com/wilderaptitude/react-testing/blob/storybook/assets/visual_check_chromatic.png?raw=true)
