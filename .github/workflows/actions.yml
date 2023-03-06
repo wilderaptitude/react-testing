@@ -1,0 +1,21 @@
+name: react-testing
+
+on: [ push ]
+
+jobs:
+  execute_tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: yarn install
+      - name: execute unit tests
+        run: yarn run test
+      - name: execute storybook tests
+        run: yarn build-storybook --quiet
+      - run: npx http-server storybook-static --port 6006 --silent
+      - run: npx wait-on tcp:6006 && yarn test-storybook
