@@ -18,4 +18,13 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner(@testing-library) in the interactive watch mode.\
+Launches the test runner(@testing-library) in the interactive watch mode.
+
+### `yarn test-storybook`
+
+Executes storybook test-runner https://storybook.js.org/docs/react/writing-tests/test-runner
+
+### `yarn chromatic`
+
+Execute visual tests on chromatic.
+Note: Before using this command, you have to replace a valid token in packaje.json
