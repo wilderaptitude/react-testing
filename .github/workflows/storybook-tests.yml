@@ -15,5 +15,5 @@ jobs:
       - run: yarn install
       - name: serve storybook
         run: yarn storybook & npx wait-on http://localhost:6006/
-      - name: execute test-runner accesibility and coverage
+      - name: execute test-runner(accesibility, interaction, coverage)
         run: yarn test-storybook --coverage

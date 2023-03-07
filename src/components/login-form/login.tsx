@@ -17,12 +17,12 @@ function Login ({ onSubmit }: LoginProps) {
         <form onSubmit={handleSubmit}>
         <label>
             Username:
-            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input data-testid="email" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </label>
         <br />
         <label>
             Password:
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input data-testid="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <br />
         <button type="submit">Submit</button>
