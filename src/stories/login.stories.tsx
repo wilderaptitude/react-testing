@@ -18,5 +18,5 @@ const Template: ComponentStory<typeof Login> = (args: LoginProps) => <Login {...
 export default meta;
 export const Default = Template.bind({});
 Default.args = {
-    onSubmit: (formData) => alert(formData)
+    onSubmit: ({ username, password }) => alert(`${username}, ${password}`)
 };
