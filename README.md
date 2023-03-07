@@ -1,5 +1,7 @@
 # react-testing
 
+[![unit-tests](https://github.com/wilderaptitude/react-testing/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/wilderaptitude/react-testing/actions/workflows/unit-tests.yml)
+
 Code from React Testing Tutorial:
 https://youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd
 
