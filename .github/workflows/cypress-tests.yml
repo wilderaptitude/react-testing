@@ -3,13 +3,24 @@ name: cypress-tests
 on: push
 
 jobs:
-  execure-tests:
+  chrome:
     runs-on: ubuntu-latest
-    name: e2e on chrome
+
     steps:
       - uses: actions/checkout@v3
       - uses: cypress-io/github-action@v5
         with:
           command: yarn cypress:component --browser chrome
           browser: chrome
+          config-file: cypress.config.ts
+
+  firefox:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cypress-io/github-action@v5
+        with:
+          command: yarn cypress:component --browser firefox
+          browser: firefox
           config-file: cypress.config.ts
