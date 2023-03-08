@@ -28,9 +28,9 @@ FilledForm.play = async ({ args, canvasElement }) => {
   const canvas = within(canvasElement);
 
   // Simulate interactions with the component
-  await userEvent.type(canvas.getByTestId('email'), 'email@provider.com');
+  await userEvent.type(canvas.getByTestId('email'), 'wilder@aptitude.com');
 
-  await userEvent.type(canvas.getByTestId('password'), 'a-random-password');
+  await userEvent.type(canvas.getByTestId('password'), 'my-password');
 
   await userEvent.click(canvas.getByRole('button'));
 
