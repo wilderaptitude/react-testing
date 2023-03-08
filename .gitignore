@@ -10,6 +10,7 @@
 
 # production
 /build
+/storybook-static
 
 # misc
 .DS_Store
@@ -25,3 +26,6 @@ yarn-error.log*
 # cypress
 /cypress/downloads
 /cypress/videos
+
+# storybook
+build-storybook.log

@@ -1,0 +1,19 @@
+name: unit-tests
+
+on: [ push ]
+
+jobs:
+  execute_tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: yarn install
+      - name: execute unit tests
+        run: yarn test
+      - name: execute test coverage
+        run: yarn coverage
