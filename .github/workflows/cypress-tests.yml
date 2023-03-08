@@ -1,0 +1,13 @@
+name: cypress-tests
+
+on: push
+
+jobs:
+  execure-tests:
+    runs-on: ubuntu-latest
+    name: e2e on chrome
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
