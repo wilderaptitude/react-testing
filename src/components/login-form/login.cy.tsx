@@ -1,9 +1,8 @@
 import React from 'react'
-
 import Login from './login'
 
 describe('<Login />', () => {
-  it('submit form, alert', () => {    
+  it('submit form, alert', () => {
     const handleSubmit = ({ username, password }: { username: string, password: string }) => {
       alert(`Submitted login form with username: ${username} and password: ${password}`);
     };
@@ -20,7 +19,7 @@ describe('<Login />', () => {
     });
   })
 
-  it('submit form, event call', () => {    
+  it('submit form, event call', () => {
     const stub = cy.stub().as('submit')
 
     cy.mount(<Login onSubmit={stub}/>)
@@ -30,6 +29,5 @@ describe('<Login />', () => {
 
     cy.get('button[type="submit"]').click()
     cy.get('@submit').should('have.been.called')
-
   })
 })
