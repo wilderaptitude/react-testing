@@ -6,7 +6,7 @@ on:
       - cypress-storybook
 
 jobs:
-  chrome:
+  cypress-storybook:
     runs-on: ubuntu-latest
 
     steps:

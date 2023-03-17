@@ -1,6 +1,9 @@
-name: test-storybook
+name: storybook-tests
 
-on: [ push ]
+on:
+  push:
+    branches:
+      - storybook
 
 jobs:
   execute_tests:
