@@ -26,7 +26,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "test-storybook": "test-storybook",
     "chromatic": "npx chromatic --project-token=<replace_token_here>",
-    "storybook:coverage": "yarn test-storybook --coverage"
+    "storybook:coverage": "yarn test-storybook --coverage",
+    "cypress": "npx cypress run --browser chrome"
   },
   "eslintConfig": {
     "extends": [
@@ -85,6 +86,7 @@
     "axe-playwright": "^1.2.3",
     "babel-plugin-named-exports-order": "^0.0.2",
     "chromatic": "^6.17.1",
+    "cypress": "^12.8.1",
     "prop-types": "^15.8.1",
     "wait-on": "^7.0.1",
     "webpack": "^5.75.0"

@@ -1,0 +1,25 @@
+name: cypress-tests
+
+on:
+  push:
+    branches:
+      - cypress-storybook
+
+jobs:
+  chrome:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: yarn install
+      - name: serve storybook
+        run: yarn storybook & npx wait-on http://localhost:6006/
+
+      - uses: cypress-io/github-action@v5
+        with:
+          command: yarn cypress
+          browser: chrome
+          config-file: cypress.config.ts
