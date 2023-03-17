@@ -4,9 +4,15 @@ export default defineConfig({
   component: {
     devServer: {
       framework: "create-react-app",
-      bundler: "webpack"
+      bundler: "webpack",
     },
     video: false,
-    screenshotOnRunFailure: false
+    screenshotOnRunFailure: false,
+  },
+
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
   },
 });
