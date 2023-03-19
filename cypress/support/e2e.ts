@@ -16,6 +16,8 @@
 // Import commands.js using ES2015 syntax:
 import './commands';
 import 'cypress-axe';
+import "@cypress-audit/lighthouse/commands";
+import "@cypress-audit/pa11y/commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

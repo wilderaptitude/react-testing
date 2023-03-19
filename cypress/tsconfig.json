@@ -3,7 +3,7 @@
       "baseUrl": "./",
       "target": "es5",
       "lib": ["esnext", "dom"],
-      "types": ["cypress", "cypress-axe"]
+      "types": ["cypress", "cypress-axe", "cypress-audit"]
     },
     "include": ["."]
   }
