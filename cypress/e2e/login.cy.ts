@@ -8,5 +8,11 @@ describe('login form', () => {
     cy.on('window:alert',(text)=>{
       expect(text).to.contains('wilder@aptitude.com, password');
     });
-  })
-})
+  });
+
+  it.only('should test performance', () => {
+    cy.visit('http://localhost:6006/iframe.html?args=&id=login--default&viewMode=story')
+    cy.injectAxe();
+    cy.checkA11y()
+  });
+});
