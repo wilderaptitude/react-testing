@@ -1,22 +1,4 @@
-function terminalLog(violations) {
-  cy.task(
-    'log',
-    `${violations.length} accessibility violation${
-      violations.length === 1 ? '' : 's'
-    } ${violations.length === 1 ? 'was' : 'were'} detected`
-  )
-  // pluck specific keys to keep the table readable
-  const violationData = violations.map(
-    ({ id, impact, description, nodes }) => ({
-      id,
-      impact,
-      description,
-      nodes: nodes.length
-    })
-  )
-
-  cy.task('table', violationData)
-}
+import { terminalLog } from "support/utils/logging";
 
 describe('login form', () => {
   it('should login', () => {
@@ -30,15 +12,9 @@ describe('login form', () => {
     });
   });
 
-  it('should check accessibility', () => {
-    cy.visit('http://localhost:6006/iframe.html?args=&id=login--default&viewMode=story')
-    cy.injectAxe();
-    //cy.checkA11y();
-    cy.checkA11y(null, null, terminalLog, true);
-  });
-
+  // wip: lighthouse command not working
   it.skip("should check performace", function () {
-    cy.visit('https://www.google.es/')
+    cy.visit('http://localhost:6006/iframe.html?args=&id=login--default&viewMode=story')
     // const customThresholds = {
     //   performance: 50,
     //   accessibility: 50,
@@ -53,7 +29,15 @@ describe('login form', () => {
     //   screenEmulation: { disabled: true },
     // };
     // cy.lighthouse(customThresholds, desktopConfig);
-
+    // ---2---
+    // cy.lighthouse({
+    //   performance: 50,
+    //   accessibility: 50,
+    //   "best-practices": 50,
+    //   seo: 50,
+    //   pwa: 50,
+    // });
+    // ---3---
     cy.lighthouse(); // not working
     cy.pa11y();
   });

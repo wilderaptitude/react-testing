@@ -16,6 +16,8 @@ export default defineConfig({
         pa11y: pa11y((pa11yReport) => {
           console.log(pa11yReport); // raw pa11y reports
         }), // calling the function is important
+        // lighthouse: lighthouse(),
+        // pa11y: pa11y(),
         log(message) {
           console.log(message)
           return null
