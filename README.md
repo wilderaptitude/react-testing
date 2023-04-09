@@ -2,12 +2,6 @@
 
 [![unit-tests](https://github.com/wilderaptitude/react-testing/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/wilderaptitude/react-testing/actions/workflows/unit-tests.yml)
 
-Code from React Testing Tutorial:
-
-<div align="center">
-  <a href="https://youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd"><img src="https://img.youtube.com/vi/T2sv8jXoP4s/0.jpg" alt="React Testing Tutorial"></a>
-</div>
-
 ### Available Scripts
 
 In the project directory, you can run:
